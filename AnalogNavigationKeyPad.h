@@ -5,7 +5,7 @@
 /*                                                                                          */
 /* To ensure that two keys can be used simultaneously, two analog inputs are used.          */
 /*                                                                                          */
-/* Alex Sokolsky, May 2015                                                                  */
+/* Alex Sokolsky, 5/2015-1/2017                                                             */
 /*                                                                                          */
 /********************************************************************************************/
 
@@ -52,6 +52,7 @@ public:
    *  or [Right, Left, Sel, A] [Up, Down, None, B]
    */
   uint8_t *m_vk;
+  /** size of the array pointed to by m_vk */
   uint8_t m_uKeys = 0;
 
   /** get one of VK_xxx */
@@ -59,7 +60,7 @@ public:
 
   uint8_t m_bOldKey = VK_NONE;
 
-  bool getAndDispatchKey(unsigned long ulNow, AnalogNavigationKeypad *p);
+  bool getAndDispatchKey(unsigned long ulNow, AnalogNavigationKeypad *p, uint8_t uKeyOtherChannel);
 
 protected:
   /** get one of VK_xxx */
