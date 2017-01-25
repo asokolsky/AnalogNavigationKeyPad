@@ -21,3 +21,37 @@ Has a central 5-way joystick and two (left and right) buttons.
 
 AnalogNavigationKeyPad.ino
 
+## Sequence of CallBacks 
+
+### Single Button presses
+
+~~~~
+MyNavKeyPad::onKeyDown vks=VK_SOFTA 
+MyNavKeyPad::onKeyUp vks=VK_SOFTA 
+~~~~
+
+### First one then another button being pressed
+
+~~~~
+MyNavKeyPad::onKeyDown vks=VK_SOFTA 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA 
+MyNavKeyPad::onKeyDown vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onLongKeyDown vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyAutoRepeat vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyUp vks=VK_SOFTA VK_SOFTB 
+MyNavKeyPad::onKeyUp vks=VK_SOFTB 
+~~~~
+
+
+
