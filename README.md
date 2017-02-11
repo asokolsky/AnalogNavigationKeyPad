@@ -15,7 +15,7 @@ Has a central 5-way joystick and two (left and right) buttons.
 |2|A1| Connect to analog input of your controller.|
 |3|A2| Connect to another analog input of your controller.|
 |4|NC| Not connected.|
-|5|GND| Ground|
+|5|AGND| Analog Ground or just Ground|
 
 ## Software Samples
 

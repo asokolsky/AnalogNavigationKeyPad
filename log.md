@@ -2,5 +2,5 @@
 GITHUB repository started 
 
 1/19/2017
-Scghematics and PCB distilled.
+Schematics and PCB ready.
 
