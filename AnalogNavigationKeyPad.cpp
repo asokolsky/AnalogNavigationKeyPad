@@ -1,4 +1,4 @@
-//#define NODEBUG 1
+#define NODEBUG 1
 #include <Arduino.h>
 #include "AnalogNavigationKeypad.h"
 #include "Trace.h"

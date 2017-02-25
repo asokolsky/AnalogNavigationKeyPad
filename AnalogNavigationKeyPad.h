@@ -30,9 +30,9 @@ class KeypadChannel
   /** delay in ms to debounce */
   const int s_iDebounceDelay = 50;
   /** delay in ms to autorepeat */
-  const int s_iAutoRepeatDelay = 200;
+  const int s_iAutoRepeatDelay = 500;
   /** delay in ms before the long key is fired */
-  const int s_iLongKeyDelay = 2000;
+  const int s_iLongKeyDelay = 3000;
 
 public:
   KeypadChannel(){}

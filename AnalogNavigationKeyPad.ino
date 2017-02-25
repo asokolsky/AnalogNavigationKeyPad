@@ -54,7 +54,7 @@ MyNavKeyPad g_kp;
 
 void setup()
 {  
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   delay(1000);   
   //while(!Serial)  ; // wait for serial port to connect. Needed for Leonardo only
