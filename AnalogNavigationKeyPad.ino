@@ -6,7 +6,7 @@ class MyNavKeyPad: public AnalogNavigationKeypad
 {
 public:  
   /** this test if for a keyboard connected to A0 and A1 */
-  MyNavKeyPad() : AnalogNavigationKeypad(A1, A2) 
+  MyNavKeyPad() : AnalogNavigationKeypad(A1, A2)
   {
     
   }
