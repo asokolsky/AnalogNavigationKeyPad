@@ -25,25 +25,25 @@ bool MyNavKeyPad::onUserInActivity(unsigned long ulNow)
 
 bool MyNavKeyPad::onKeyAutoRepeat(uint8_t vks)
 {
-  DEBUG_PRINT("MyNavKeyPad::onKeyAutoRepeat vks="); DEBUG_PRINTLN(getKeyNames(vks));
+  DEBUG_PRINT("MyNavKeyPad::onKeyAutoRepeat vks="); DEBUG_PRNTLN(getKeyNames(vks));
   return false; 
 }
 
 bool MyNavKeyPad::onKeyDown(uint8_t vks)
 {
-  DEBUG_PRINT("MyNavKeyPad::onKeyDown vks="); DEBUG_PRINTLN(getKeyNames(vks));
+  DEBUG_PRINT("MyNavKeyPad::onKeyDown vks="); DEBUG_PRNTLN(getKeyNames(vks));
   return false; 
 }
 
 bool MyNavKeyPad::onLongKeyDown(uint8_t vks)
 {
-  DEBUG_PRINT("MyNavKeyPad::onLongKeyDown vks="); DEBUG_PRINTLN(getKeyNames(vks));
+  DEBUG_PRINT("MyNavKeyPad::onLongKeyDown vks="); DEBUG_PRNTLN(getKeyNames(vks));
   return false; 
 }
 
 bool MyNavKeyPad::onKeyUp(uint8_t vks)
 {
-  DEBUG_PRINT("MyNavKeyPad::onKeyUp vks="); DEBUG_PRINTLN(getKeyNames(vks));
+  DEBUG_PRINT("MyNavKeyPad::onKeyUp vks="); DEBUG_PRNTLN(getKeyNames(vks));
   return false; 
 }
 
@@ -54,14 +54,12 @@ MyNavKeyPad g_kp;
 
 void setup()
 {  
-  Serial.begin(115200);
-  
+  Serial.begin(115200);  
   delay(1000);   
   //while(!Serial)  ; // wait for serial port to connect. Needed for Leonardo only
   DEBUG_PRINTLN("AnalogNavigationKeypad test!");
     
-  //g_kp.setup();
-  
+  //g_kp.setup();  
 }
 
 void loop()

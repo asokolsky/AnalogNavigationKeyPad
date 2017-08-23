@@ -246,6 +246,7 @@ const char *AnalogNavigationKeypad::getKeyNames(uint8_t vks)
 {
   return ::getKeyNames(vks);
 }
+/*
 
 bool AnalogNavigationKeypad::onUserInActivity(unsigned long ulNow)
 {
@@ -277,4 +278,5 @@ bool AnalogNavigationKeypad::onKeyUp(uint8_t vks)
   return false; 
 }
 
+*/
 

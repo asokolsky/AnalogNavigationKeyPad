@@ -6,6 +6,7 @@ Has a central 5-way joystick and two (left and right) buttons.
 ## Hardware
 
 [Schematics and PCB] (https://easyeda.com/asokolsky/Analog_Navigation_Keypad-a25307c2a2254b4eb4a9cd3543392b90)
+[Schematics and PCB for SMD Version] (https://easyeda.com/asokolsky/Analog_Navigation_Keypad_copy-e961efefbccf49cd99776f7c87a63a96)
 
 ### PinOut
 
