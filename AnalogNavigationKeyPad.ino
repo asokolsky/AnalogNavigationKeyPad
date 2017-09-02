@@ -2,11 +2,20 @@
 #include "Trace.h"
 #include "AnalogNavigationKeypad.h"
 
+/** Keypad connected to these analog pins */
+const uint8_t bKeypadPin1 = 
+  A0; // for Arduino/Teensy
+  //PA0;   // for MapleMini
+const uint8_t bKeypadPin2 = 
+  A1;  // for Arduino/Teensy
+  // PA1;   // for MapleMini
+
+/** derive a class so that I can overwrite the callbacks */
 class MyNavKeyPad: public AnalogNavigationKeypad
 {
 public:  
   /** this test if for a keyboard connected to A0 and A1 */
-  MyNavKeyPad() : AnalogNavigationKeypad(A0, A1)
+  MyNavKeyPad() : AnalogNavigationKeypad(bKeypadPin1, bKeypadPin2)
   {
     
   }
@@ -25,7 +34,7 @@ bool MyNavKeyPad::onUserInActivity(unsigned long ulNow)
 
 bool MyNavKeyPad::onKeyAutoRepeat(uint8_t vks)
 {
-  DEBUG_PRINT("MyNavKeyPad::onKeyAutoRepeat vks="); DEBUG_PRNTLN(getKeyNames(vks));
+  DEBUG_PRINT("MyNavKeyPad::onKeyAutoRepeat vks="); DEBUG_PRNT(getKeyNames(vks)); DEBUG_PRINT("  ulNow="); DEBUG_PRINTDEC(millis()); DEBUG_PRINTLN("");  
   return false; 
 }
 
